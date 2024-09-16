@@ -1,4 +1,5 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %} 
+{% block content %}
 <h1>Mental Health Tracker</h1>
 
 <h5>NPM:</h5>
@@ -10,7 +11,9 @@
 
 <h5>Class:</h5>
 <p>{{ class }}</p>
-... {% if not mood_entries %}
+
+... 
+{% if not mood_entries %}
 <p>Belum ada data mood pada mental health tracker.</p>
 {% else %}
 <table>
@@ -21,8 +24,8 @@
     <th>Mood Intensity</th>
   </tr>
 
-  {% comment %} Berikut cara memperlihatkan data mood di bawah baris ini {%
-  endcomment %} {% for mood_entry in mood_entries %}
+  {% comment %} Berikut cara memperlihatkan data mood di bawah baris ini {%endcomment %} 
+  {% for mood_entry in mood_entries %}
   <tr>
     <td>{{mood_entry.mood}}</td>
     <td>{{mood_entry.time}}</td>
